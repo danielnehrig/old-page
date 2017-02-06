@@ -1,0 +1,56 @@
+.design
+	width: 100%
+	display: block
+	text-align: center
+	.topLeft
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1000
+		margin: 25px
+		.backMain
+			color: white
+			font-size: 32px
+			opacity: 0.8
+			+transition()
+			&:hover
+				opacity: 1
+	.hollow
+		width: 100vw
+		height: 100vh
+		display: block
+		background-position: center
+		background-size: cover
+		img
+			object-fit: cover
+			display: block
+			width: 100vw
+			height: 100vh
+		.weapons
+			position: absolute
+			width: 100vw
+			top: 0
+			height: 100vh
+			+display(flex)
+			+justify-content(center)
+			+align-items(center)
+			ul
+				list-style: none
+				padding: 0
+				margin: 0
+				width: 100%
+				+display(flex)
+				li
+					display: inline-block
+					width: 100%
+					a
+						color: white
+						display: inline-block
+						+transition()
+						font-size: 24px
+						border: 1px solid transparent
+						padding: 10px 30px
+						&:hover
+							text-shadow: 0 0 7px black
+							border: 1px solid rgba(255,255,255,0.3)
+							background-color: rgba(255,255,255,0.05)

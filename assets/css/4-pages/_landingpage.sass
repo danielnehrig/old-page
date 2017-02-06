@@ -1,0 +1,278 @@
+.home
+	width: 100vw
+	height: 100vh
+	display: block
+	text-align: center
+	vertical-align: none
+	span
+		+display(flex)
+		+align-items(center)
+		+justify-content(center)
+		position: relative
+		top: 50%
+		height: 200px
+		+transform(translateY(-60%))
+		.flex
+			position: relative
+			top: 0
+			+display(inline-flex)
+			+flex-direction(column)
+			margin: 0 20px
+			height: 158px
+			+transform(translateY(-40px))
+			+transition(1s ease)
+			opacity: 0
+			position: relative
+			.hollowlogo
+				+size(100px)
+				margin: 0 40px
+				background-size: cover
+				background-image: url(../img/hollowlogo.png)
+				display: inline-block
+
+			&.fadeIn
+				+transform(translateY(0px))
+				opacity: 1
+			h2
+				font-size: 32px
+				height: 29px
+				font-family: Neou
+				margin: 0
+				margin-bottom: 10px
+				color: rgba(255,255,255,0.3)
+				text-decoration: none
+				white-space: nowrap
+				border-bottom: 3px solid transparent
+				+transition(0.5s ease)
+				+transform(scale3d(1,1,1))
+				&.featCode
+					&.active
+						position: relative
+						color: rgba(255,255,255,1)
+						color: $primaryColor
+						border-bottom: 3px solid white
+						&::before, &::after
+							position: absolute
+							height: 26px
+							content: attr(data-text)
+							top: 0
+							left: 0
+							overflow: hidden
+							//background: #3d3d3d
+							color: $primaryColor
+							clip: rect(0, 900px, 0, 0)
+						&::after
+							left: 2px
+							text-shadow: 3px 0 green
+							+animation(glitch-effect 3s infinite, linear alternate-reverse)
+						&::before
+							content: "404  ERROR"
+							color: #fff
+							z-index: 1000
+							background: #000
+							text-align: center
+							left: -2px
+							text-shadow: -1px 0 red
+							+animation(noise-anim 3s infinite, linear alternate-reverse)
+				&.featDesign
+					&.active
+						position: relative
+						color: rgba(255,255,255,1)
+						color: $primaryColor
+						border-bottom: 3px solid white
+						&::before, &::after
+							position: absolute
+							height: 26px
+							content: attr(data-text)
+							top: 0
+							left: 0
+							overflow: hidden
+							//background: #3d3d3d
+							color: $primaryColor
+							clip: rect(0, 900px, 0, 0)
+						&::after
+							left: 2px
+							text-shadow: 3px 0 green
+							+animation(glitch-effect 3s infinite, linear alternate-reverse)
+						&::before
+							content: attr(data-text)
+							color: #fff
+							background: #000
+							left: -2px
+							text-shadow: -1px 0 red
+							+animation(glitch-effect 2s infinite, linear alternate-reverse)
+
+			li
+				+display(flex)
+				+flex-direction(row)
+				+align-items(center)
+				+justify-content(center)
+				color: rgba(255,255,255,0.5)
+				font-size: 18px
+				margin: 0
+				border: 1px solid transparent
+				+transition(0.5s ease)
+				position: relative
+				overflow: hidden
+				box-sizing: border-box
+				&:hover
+					color: rgba(255,255,255,1)
+					background-color: rgba(255,255,255,0.08)
+					box-shadow: 0px 0px 7px rgba(255,255,255,0.09)
+					border: 1px solid white
+				ul
+					+display(inline-flex)
+					position: absolute
+					top: 0
+					left: 260px
+					width: 100%
+					+transition(1s ease)
+					&.push
+						left: 0
+					a
+						display: inline-block
+						padding: 15px
+						color: rgba(255,255,255,0.5)
+						font-size: 18px
+						margin: 0
+						border: none
+						border-right: 1px solid white
+						width: 100%
+						position: relative
+						+transition()
+						&:hover
+							color: white
+							background: none
+							box-shadow: none
+						&:last-child
+							border: none 
+
+				p
+					display: inline-block
+					padding: 15px
+					color: rgba(255,255,255,0.5)
+					font-size: 18px
+					margin: 0
+					width: 100%
+					+transition(1s ease)
+					position: relative
+					left: 0
+					top: 0px
+					cursor: pointer
+					&.push
+						left: -240px
+					&:hover
+						border: none
+						color: white
+						background: none
+						box-shadow: none
+			/**a,p,
+				display: inline-block
+				padding: 15px
+				color: rgba(255,255,255,0.5)
+				font-size: 18px
+				border: 1px solid transparent
+				margin: 0
+				+transition()
+				&.hollowLink
+					padding: 0
+					border: none
+					&:hover
+						border: none
+						background: none
+						box-shadow: none**/
+				&:hover
+					color: rgba(255,255,255,1)
+					background-color: rgba(255,255,255,0.08)
+					box-shadow: 0px 0px 7px rgba(255,255,255,0.09)
+					border: 1px solid white
+		.logo
+			width: 171px
+			background-repeat: no-repeat
+			display: inline-block
+			height: 151px
+			background-image: url(../img/LogoTrans.png)
+			background-position: center
+	nav
+		position: relative
+		top: 50%
+		+transform(translateY(-90%))
+		+display(flex)
+		+flex-direction(column)
+		h1
+			font-size: 32px
+			font-family: Neou
+			letter-spacing: 0
+			display: block
+			color: white
+			text-align: center
+			margin: 0 auto
+		ul
+			list-style: none
+			margin: 0px auto
+			display: inline-block
+			padding: 0
+			li
+				float: left
+				text-align: center
+				display: inline-block
+				margin: 20px 25px
+				border: 1px solid transparent
+				box-size: border-box
+				opacity: 0
+				+transition(1s ease)
+				&.fadeIn
+					opacity: 1
+				a
+					color: #19F795
+					+transition()
+					padding: 10px
+					border: 1px solid transparent
+					box-size: border-box
+					&:hover
+						border: 1px solid rgba(255,255,255,0.5)
+						box-shadow: 0px 0px 7px white
+						background-color: rgba(255,255,255,0.1)
+				.steam-group-button 
+					font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif
+					height: 28px
+					border-radius: 4px
+					color: #FFF
+					font-size: 13px
+					line-height: 26px
+					outline: none
+					text-decoration: none
+					padding: 0
+					position: relative
+					font-weight: bold
+					display: inline-block
+					vertical-align: top
+					-moz-box-sizing: border-box
+					-webkit-box-sizing: border-box
+					-ms-box-sizing: border-box
+					box-sizing: border-box
+					border: #333 solid 1px
+					background-color: #4D4B48
+					background-image: -webkit-gradient(linear,left top,left bottom,from(#4D4B48),to(#111))
+					background-image: -moz-linear-gradient(top,#4D4B48,#111)
+					background-image: linear-gradient(top,#4D4B48,#111)
+				.steam-group-button:focus, .steam-group-button:hover, .steam-group-button:active 
+					color: #FFF
+					border-color: #111
+					background-color: #333
+					background-image: -webkit-gradient(linear,left top,left bottom,from(#444),to(#111))
+					background-image: -moz-linear-gradient(top,#444,#111)
+					background-image: linear-gradient(top,#444,#111)
+					box-shadow: none
+				.steam-group-button:active 
+					box-shadow: inset 0 3px 7px rgba(255,255,255,0.15)
+				.steam-group-icon 
+					width: 16px
+					height: 16px
+					left: 4px
+					margin-top: -8px
+					position: absolute
+					top: 50%
+					background: transparent url('//cdn.steampowered.com/favicon.ico') 0 0 no-repeat
+				.steam-group-label 
+					padding: 0 7px 0 26px

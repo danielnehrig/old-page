@@ -1,0 +1,68 @@
+<div class="home" ng-controller="homeCtrl">
+	<header ng-include="'templates/nav.html'"></header>
+	<span>
+		<div class="flex">
+			<h2 class="featDesign" data-text="Featured Design">Featured Design</h2>
+			<a class="hollowLink" href="#!/design/hollow"><div class="hollowlogo"></div></a>
+		</div>
+		<div class="logo"></div>
+		<div class="flex">
+			<h2 class="featCode" data-text="Featured Code">Featured Code</h2>
+			<li class="acode">
+				<p><i class="fa fa-html5"></i> iTunes Project</p>
+				<ul>
+					<a href="Code/iTunes/"><i class="fa fa-home"></i> Demo</a><a href="https://github.com/inet-pwnZ/iTunesProject"><i class="fa fa-github"></i> GitHub</a>
+				</ul>
+			</li>
+			<li class="acode">
+				<p><i class="fa fa-html5"></i> BattleNet Project</p>
+				<ul>
+					<a href="Code/BattleNet/"><i class="fa fa-home"></i> Demo</a><a href="https://github.com/inet-pwnZ/BattleNet"><i class="fa fa-github"></i> GitHub</a>
+				</ul>
+			</li>
+		</div>
+	</span>
+	<nav class="social">
+		<h1 data-text="{{ slogen }}">{{ slogen }}</h1>
+		<ul>
+			<li><a href="https://twitter.com/inetpwnZ" class="twitter-follow-button" data-show-count="false" data-size="large">Twitter</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+			<li><a class="github-button" href="https://github.com/inet-pwnZ" data-style="mega" data-count-href="/inet-pwnZ/followers" data-count-api="/users/inet-pwnZ#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @inet-pwnZ on GitHub">GitHub</a></li>
+			<li><a class="steam-group-button" target="_blank" href="//steamcommunity.com/groups/inetpwnzworkshop"><i class="steam-group-icon"></i><div class="steam-group-label">Steam</div></a></li>
+			<li><div class="g-ytsubscribe" data-channel="inetpwnZ"></div></li>
+		</ul>
+	</nav>
+</div>
+<!-- Home Route JS States -->
+<!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer src="https://apis.google.com/js/platform.js?publisherid=115393864271174099669"></script>
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+<script>
+$('.hollowlogo').hover(function() {
+	$('.featDesign').toggleClass('active');
+});
+$('.flex .acode').click(function() {
+	$(this).children("p").addClass('push');
+	$(this).children("ul").addClass('push');
+});
+$('.flex .acode').hover(function() {
+	$('.featCode').addClass('active');
+}, function() {
+	$(this).children("p").removeClass('push');
+	$(this).children("ul").removeClass('push');
+	$('.featCode').removeClass('active');
+});
+$('span .logo').hover(function() {
+	$('h1').toggleClass('active');
+});
+$(function() {
+setTimeout(function() {
+$('.home span .flex').addClass('fadeIn');
+}, 1500);
+});
+$(function() {
+setTimeout(function() {
+$('nav ul li').addClass('fadeIn');
+}, 2500);
+});
+</script>

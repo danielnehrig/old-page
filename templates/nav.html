@@ -1,0 +1,30 @@
+  <div class="nav">
+    <ul>
+      <li><a href="#!/home" class="{{ home }}"><i class="fa fa-home"></i>Home</a></li>
+      <li><a href="#!/design" class="{{ design }}"><i class="fa fa-deviantart"></i>Design</a>
+      <ul>
+          <li><a href="#!/design/artwork"><i class="fa fa-picture-o"></i>Artwork</a></li>
+          <li><a href="#!/design/logo"><i class="fa fa-picture-o"></i>Logo</a></li>
+          <li><a href="#!/design/hollow"><i class="fa fa-crosshairs"></i>Hollow</a></li>
+        </ul>
+      </li>
+      <li><a href="#!/code/" class="{{ code }}"><i class="fa fa-terminal"></i>Code</a>
+        <ul>
+          <li><a href="/Code/iTunes"><i class="fa fa-code"></i>iTunes</a></li>
+          <li><a href="/Code/BattleNet"><i class="fa fa-code"></i>BattleNet</a></li>
+        </ul>
+      </li>
+      <!-- <li><a href="#!/store" class="{{ store }}"><i class="fa fa-cart-plus"></i>Store</a></li>
+      <li><a href="#!/stream" class="{{ stream }}"><i class="fa fa-circle off"></i>Stream</a></li>   -->   
+      <li><a href="#!/about" class="{{ about }}"><i class="fa fa-user"></i>About</a></li>
+    </ul>
+  </div>
+<script>
+	(function(){
+  var nav = $('nav');
+  nav.delegate('a','click', function(e){
+    nav.find('.active').removeClass('active');    
+    $(e.target).closest('a').addClass('active');
+  })
+})();
+</script>

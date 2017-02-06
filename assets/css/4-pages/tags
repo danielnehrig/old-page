@@ -1,0 +1,62 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+.block	_indexbrowser.scss	/^.block {$/;"	c
+.flex	_landingpage.scss	/^    .flex {$/;"	c
+.footer	_indexbrowser.scss	/^.footer {$/;"	c
+.hollowlogo	_landingpage.scss	/^      .hollowlogo {$/;"	c
+.home	_landingpage.scss	/^.home {$/;"	c
+.logo	_landingpage.scss	/^    .logo {$/;"	c
+.parent	_indexbrowser.scss	/^.parent a[href^="\/"]:hover {$/;"	c
+.steam-group-button	_landingpage.scss	/^        .steam-group-button {$/;"	c
+.steam-group-button	_landingpage.scss	/^        .steam-group-button:active {$/;"	c
+.steam-group-button	_landingpage.scss	/^        .steam-group-button:focus, .steam-group-button:hover, .steam-group-button:active {$/;"	c
+.steam-group-icon	_landingpage.scss	/^        .steam-group-icon {$/;"	c
+.steam-group-label	_landingpage.scss	/^        .steam-group-label {$/;"	c
+.wrapper	_indexbrowser.scss	/^.wrapper {$/;"	c
+@include	_landingpage.scss	/^              @include animation(glitch-effect 2s infinite, linear alternate-reverse);$/;"	v
+@include	_landingpage.scss	/^              @include animation(glitch-effect 3s infinite, linear alternate-reverse);$/;"	v
+@include	_landingpage.scss	/^              @include animation(noise-anim 3s infinite, linear alternate-reverse);$/;"	v
+@include	_landingpage.scss	/^            @include transition;$/;"	v
+@include	_landingpage.scss	/^          @include display(inline-flex);$/;"	v
+@include	_landingpage.scss	/^          @include transition(1s ease);$/;"	v
+@include	_landingpage.scss	/^          @include transition;$/;"	v
+@include	_landingpage.scss	/^        @include align-items(center);$/;"	v
+@include	_landingpage.scss	/^        @include display(flex);$/;"	v
+@include	_landingpage.scss	/^        @include flex-direction(row);$/;"	v
+@include	_landingpage.scss	/^        @include justify-content(center);$/;"	v
+@include	_landingpage.scss	/^        @include size(100px);$/;"	v
+@include	_landingpage.scss	/^        @include transform(scale3d(1, 1, 1));$/;"	v
+@include	_landingpage.scss	/^        @include transform(translateY(0px));$/;"	v
+@include	_landingpage.scss	/^        @include transition(0.5s ease);$/;"	v
+@include	_landingpage.scss	/^        @include transition(1s ease);$/;"	v
+@include	_landingpage.scss	/^      @include display(inline-flex);$/;"	v
+@include	_landingpage.scss	/^      @include flex-direction(column);$/;"	v
+@include	_landingpage.scss	/^      @include transform(translateY(-40px));$/;"	v
+@include	_landingpage.scss	/^      @include transition(1s ease);$/;"	v
+@include	_landingpage.scss	/^    @include align-items(center);$/;"	v
+@include	_landingpage.scss	/^    @include display(flex);$/;"	v
+@include	_landingpage.scss	/^    @include flex-direction(column);$/;"	v
+@include	_landingpage.scss	/^    @include justify-content(center);$/;"	v
+@include	_landingpage.scss	/^    @include transform(translateY(-60%));$/;"	v
+@include	_landingpage.scss	/^    @include transform(translateY(-90%));$/;"	v
+a	_indexbrowser.scss	/^a {$/;"	t
+a	_landingpage.scss	/^          a {$/;"	t
+a	_landingpage.scss	/^        a {$/;"	t
+code	_indexbrowser.scss	/^code {$/;"	t
+h1	_landingpage.scss	/^    h1 {$/;"	t
+h2	_landingpage.scss	/^      h2 {$/;"	t
+li	_landingpage.scss	/^      li {$/;"	t
+nav	_landingpage.scss	/^  nav {$/;"	t
+p	_landingpage.scss	/^        p {$/;"	t
+span	_landingpage.scss	/^  span {$/;"	t
+table	_indexbrowser.scss	/^table {$/;"	t
+td	_indexbrowser.scss	/^td {$/;"	t
+td a	_indexbrowser.scss	/^td a {$/;"	t
+th	_indexbrowser.scss	/^th {$/;"	t
+tr	_indexbrowser.scss	/^tr {$/;"	t
+ul	_landingpage.scss	/^        ul {$/;"	t
+ul	_landingpage.scss	/^    ul {$/;"	t

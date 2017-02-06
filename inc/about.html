@@ -1,0 +1,95 @@
+<div class="about" ng-controller="aboutCtrl">
+	<header ng-include="'templates/nav.html'"></header>
+	<div class="container">
+		<div class="all">
+			<div class="personal">
+				<a href="/assets/img/dontletgo.gif"><div class="avatar"></div></a>
+				<div class="name">{{ name }}</div>
+				<div class="job">{{ job }}</div>
+			</div>
+			<div class="side">
+				<h2 data-text="{{ title }}">{{ title }}</h2>
+				<p class="bio">{{ bio }}</p>
+			</div>
+			<div class="signature">
+			</div>
+		</div>
+		<div class="all column">
+			<span><h2 data-text="{{ skills }}">{{ skills }}</h2></span>
+	  		<div class="skills" ng-repeat="rating in ratings">
+	         	<span class="skill-name">{{ rating.name }}</span>
+	          	<div id="{{ rating.numb }}" class="skill-rating" star-rating rating-value="rating.current" max="rating.max">
+	          	</div>
+	  		</div>
+  		</div>
+	</div>
+</div>
+<!-- About Route JS States -->
+<script>
+// About Fade in Delay
+$(function() {
+	var timer;
+	setTimeout(function() {
+		$('.container .all .side').addClass('fadeIn');
+	}, 2200);
+
+$('.avatar').hover(function() {
+	var egg = $("#egg")[0];
+	timer = setTimeout(function() {
+
+		$('.avatar').addClass('lmao');
+		$('h2').addClass('addglitch');
+
+
+
+		context = new AudioContext();
+		analyser = context.createAnalyser();
+		source = context.createMediaElementSource(audio);
+		source.connect(analyser);
+		analyser.connect(context.destination);
+		analyser.fftSize = 128;
+
+	        var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+	        function renderFrame() {
+	            analyser.getByteFrequencyData(frequencyData);
+	            m10.style.width = ((frequencyData[3] * 6) / 12) + "px";
+	            m20.style.width = ((frequencyData[6] * 6) / 12) + "px";
+	            m30.style.width = ((frequencyData[8] * 6) / 12) + "px";
+	            m40.style.width = ((frequencyData[10] * 6) / 12) + "px";
+	            m50.style.width = ((frequencyData[12] * 6) / 12) + "px";
+	            m60.style.width = ((frequencyData[14] * 6) / 12) + "px";
+	            requestAnimationFrame(renderFrame);
+	        }
+	        audio.play();
+	        renderFrame();
+
+
+
+
+}, 9200);
+}, function() {
+
+	clearTimeout(timer);
+	$('.avatar').removeClass('lmao');
+	$('h2').removeClass('addglitch');
+	audio.pause();
+	audio.currentTime = 0;
+	function resetFrame() {
+	m10.style.width = "auto";
+    m20.style.width = "auto";
+    m30.style.width = "auto";
+    m40.style.width = "auto";
+    m50.style.width = "auto";
+    m60.style.width = "auto";
+    requestAnimationFrame(resetFrame);
+    }
+    resetFrame();
+});
+
+});
+</script>
+<audio id="audio" src="/assets/sound/1.mp3" preload="auto">
+<!--<source src="/assets/sound/1.mp3"></source>
+This browser does not support the HTML5 audio tag.-->
+</audio>

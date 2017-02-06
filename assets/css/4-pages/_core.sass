@@ -1,0 +1,54 @@
+// Transition Setting
+.wrap
+	background-image: url(../img/construct.jpg)
+	background-size: cover
+	background-position: center
+	width: 100vw
+	height: 100vh
+	display: block
+	overflow: hidden
+	&.overflow
+		overflow: visible
+	&.sizereset
+		width: auto
+		height: auto
+
+
+.main
+	+transition(all 1.0s ease 0s)
+	position: absolute
+	width: 100%
+	overflow: hidden
+	&.ng-enter
+		.home
+			+animation(fadeInUp 1.0s ease)
+			+animation-fill-mode(both)
+		.design
+			+animation(fadeIn 1.0s ease)
+			+animation-fill-mode(both)
+		.artwork
+			+animation(fadeInLeft 1.0s ease)
+			+animation-fill-mode(both)
+		.streamwrap
+			+animation(fadeIn 2.0s ease)
+			+animation-fill-mode(both)
+		.about
+			+animation(zoomInRight 2.0s ease)
+			+animation-fill-mode(both)
+		
+	&.ng-leave
+		.home
+			+animation(fadeOutDown 1.0s ease)
+			+animation-fill-mode(both)
+		.design
+			+animation(fadeOut 1.0s ease)
+			+animation-fill-mode(both)
+		.artwork
+			+animation(fadeOutLeft 1.0s ease)
+			+animation-fill-mode(both)
+		.streamwrap
+			+animation(fadeOut 2.0s ease)
+			+animation-fill-mode(both)
+		.about
+			+animation(zoomOutLeft 1.0s ease)
+			+animation-fill-mode(both)

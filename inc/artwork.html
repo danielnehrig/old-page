@@ -1,0 +1,55 @@
+<div class="artwork" ng-controller="artworkCtrl">
+    <div class="topLeft">
+            <a href="#/home"><div class="fa fa-reply backMain"></div></a>
+        </div>
+    <h2>{{ title }}</h2>
+    <div class="center">
+       <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure class="special" ng-repeat="img in swipe1">
+                        <a href="{{ img.full }}" class="swipebox" title="{{ img.alt }}">
+                            <img class="lazy" src="{{ img.thumb }}" alt="{{ img.alt }}">
+                        </a>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure class="special" ng-repeat="img in swipe2">
+                        <a href="{{ img.full }}" class="swipebox" title="{{ img.alt }}">
+                            <img class="lazy" src="{{ img.thumb }}" alt="{{ img.alt }}">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div> 
+    </div>
+</div>
+<!-- Artwork Route JS States -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        calculateHeight: true,
+        mode: 'horizontal',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        loop: false,
+        // slidesPerView: 3,
+        // slidesPerColumn: 2,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true
+    });
+</script>
+<script type="text/javascript">
+// About Fade in Delay
+$(function() {
+setTimeout(function() {
+$('.swiper-container .swiper-slide figure').addClass('fadeIn');
+}, 1000);
+$( '.swipebox' ).swipebox();
+});
+</script>

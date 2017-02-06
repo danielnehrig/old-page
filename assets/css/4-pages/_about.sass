@@ -1,0 +1,155 @@
+.about
+	width: 100vw
+	height: 100vh
+	+display(inline-flex)
+	+justify-content(center)
+	+align-items(center)
+	text-align: center
+	vertical-align: top
+	.container
+		+display(flex)
+		+justify-content(center)
+		+align-items(center)
+		//border: 1px solid white
+		overflow: hidden
+		.all
+			background-color: rgba(255,255,255,0.1)
+			box-shadow: inset 0px -5px 0px rgba(255,255,255,0.3)
+			+display(flex)
+			+justify-content(center)
+			+align-items(center)
+			margin-left: 15px
+			overflow: hidden
+			.personal
+				+display(flex)
+				+justify-content(center)
+				+align-items(center)
+				+flex-direction(column)
+				width: 210px
+				margin: 15px
+				a
+					cursor: default
+					padding: 0
+					margin: 0
+				.avatar
+					margin-bottom: 15px
+					border-radius: 50%
+					background-image: url(/assets/img/avatar.jpg)
+					+size(125px)
+					background-position: center
+					background-repeat: no-repeat
+					background-size: cover
+					display: inline-block
+					box-shadow: 5px 5px 8px rgba(0,0,0,0.3)
+					+transition()
+					&.lmao
+						background-image: url(/assets/img/egg/vinyl.png)
+						+animation(rotating 2s linear infinite)
+						box-shadow: 0px 0px 0px rgba(0,0,0,0)
+				.name
+					color: white
+					font-size: 16px
+				.job
+					color: white
+					font-size: 10px
+					font-weight: 400px
+			.side
+				+display(inline-flex)
+				+flex-direction(column)
+				margin: 0 20px
+				opacity: 0
+				+transform(translateY(-40px))
+				+transition(2s ease)
+				&.fadeIn
+					opacity: 1
+					+transform(translateY(0))
+				h2
+					display: inline-block
+					margin: 15px 0
+					text-align: left
+					color: white
+					border-bottom: 3px solid white
+					&.addglitch
+						&::before, &::after
+							position: absolute
+							content: attr(data-text)
+							overflow: hidden
+							background: black
+							color: $primaryColor
+							clip: rect(0, 900px, 0, 0)
+						&::after
+							left: 2px
+							text-shadow: 3px 0 green
+							animation: glitch-effect 3s infinite linear alternate-reverse
+						&::before
+							content: attr(data-text)
+							color: #fff
+							z-index: 1000
+							text-align: center
+							left: -2px
+							text-shadow: -1px 0 red
+							animation: noise-anim 3s infinite linear alternate-reverse
+				p
+					+display(flex)
+					color: white
+					text-shadow: 2px 0 0 black
+					width: 300px
+					text-align: left
+			&.column
+				+flex-direction(column)
+				text-align: left
+				width: 314px
+			#bar
+				position: absolute
+				width: 100%
+				height: 200px
+				-webkit-transition: 0.1s ease all
+			.p
+				background-color: blue
+				height: 100%
+				width: 12px
+				margin: 5px
+				float: left
+			span
+				width: 100%
+				+display(inline-flex)
+				+align-items(flex-start)
+				+justify-content(flex-start)
+				h2
+					display: inline-block
+					text-align: left
+					margin: 15px 0px
+					margin-left: 20px
+					color: white
+					border-bottom: 3px solid white
+					+align-items(flex-start)
+			.skills
+				width: auto
+				padding: 5px
+				+display(flex)
+				+justify-content(center)
+				+align-items(center)
+				margin: 0px 15px
+				&:last-child
+					margin-bottom: 15px
+				.skill-name
+					color: white
+					width: 100px
+					text-align: left
+					font-size: 12px
+					margin-right: 15px
+				.skill-rating
+					color: grey
+					font-size: 16px
+					height: 20px
+					position: relative
+					line-height: -10px
+					overflow: hidden
+					width: auto
+					i
+						position: relative
+						margin-left: 5px
+						&.filled
+							color: white
+							&:before
+								content: ''
